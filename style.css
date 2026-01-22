@@ -1,0 +1,83 @@
+:root {
+    --primary: #3593d1;
+    --bg: #f0f2f5;
+    --success: #51cf66;
+    --danger: #ff8787;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#show-dialog {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#library-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.book-card {
+    background-color: white;
+    border-left: 8px solid var(--primary);
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-buttons {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+button.status-btn, button.remove-btn {
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.read-true { background-color: var(--success); color: white; }
+.read-false { background-color: #dee2e6; }
+.remove-btn { background-color: var(--danger); color: white; }
+
+dialog {
+    border: none;
+    border-radius: 12px;
+    padding: 25px;
+    width: 320px;
+}
+
+dialog::backdrop { background-color: rgba(0,0,0,0.5); }
+
+#book-form { display: flex; flex-direction: column; gap: 15px; }
+
+input[type="text"], input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
